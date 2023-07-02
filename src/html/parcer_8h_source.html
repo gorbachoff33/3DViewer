@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DViewer: Исходный файл parcer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">3DViewer<span id="projectnumber">&#160;v.1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">parcer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="parcer_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// created by pizpoti</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef PARCER_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define PARCER_H_</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="s21__matrix_8h.html">s21_matrix.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structvertex.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structvertex.html#ab748e1291d15a2075de8468498418adc">   15</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structvertex.html#ab748e1291d15a2075de8468498418adc">vertex_mount</a>;        <span class="comment">// количество вершин</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structvertex.html#a2d04113c7464f928fdb547be52453e18">   16</a></span>  <span class="keywordtype">double</span> **<a class="code hl_variable" href="structvertex.html#a2d04113c7464f928fdb547be52453e18">vertex_matrix</a>;  <span class="comment">// матрица координат</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structvertex.html#ae184fd6a13acf622bf9033096e9f2fc5">   17</a></span>  <span class="keywordtype">double</span> vertex_x[2];      <span class="comment">// min and max</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structvertex.html#aa565d72126d803947d245c78c7366f78">   18</a></span>  <span class="keywordtype">double</span> vertex_y[2];      <span class="comment">// min and max</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structvertex.html#a23699dace12205339a9d2ed859bff3d1">   19</a></span>  <span class="keywordtype">double</span> vertex_z[2];      <span class="comment">// min and max</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <a class="code hl_struct" href="structvertex.html">vertex</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structpoligon.html">   25</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structpoligon.html#ad4869cc74a92a7cea7c7d00da15224e2">   26</a></span>  <span class="keywordtype">int</span> *<a class="code hl_variable" href="structpoligon.html#ad4869cc74a92a7cea7c7d00da15224e2">poligon_arr</a>;  <span class="comment">// массив полигонов</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structpoligon.html#a22a5e43a2bdc18f9310721be7b159947">   27</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpoligon.html#a22a5e43a2bdc18f9310721be7b159947">poligon_sum</a>;  <span class="comment">// колличество индексов в полигоне</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <a class="code hl_struct" href="structpoligon.html">poligon</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmain__struct.html">   33</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmain__struct.html#a0c29f390f69443a571759aa8f42f3689">   34</a></span>  <a class="code hl_struct" href="structvertex.html">vertex</a> *<a class="code hl_variable" href="structmain__struct.html#a0c29f390f69443a571759aa8f42f3689">v</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structmain__struct.html#a36cb14e7775d60cbb035757865df0641">   35</a></span>  <a class="code hl_struct" href="structpoligon.html">poligon</a> **<a class="code hl_variable" href="structmain__struct.html#a36cb14e7775d60cbb035757865df0641">p</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structmain__struct.html#a1156179497e0b515c6ee6c27f3d307df">   36</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structmain__struct.html#a1156179497e0b515c6ee6c27f3d307df">struct_count</a>;  <span class="comment">// колличество созданных структур с полигонами</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <a class="code hl_struct" href="structmain__struct.html">main_struct</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">int</span> <a class="code hl_function" href="parcer_8h.html#ad1b0ceef032cdd87af8fd057f953ff3a">parser</a>(<span class="keywordtype">char</span> *file, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">int</span> <a class="code hl_function" href="parcer_8h.html#aefe643581a10c60031d33f271f2fcaab">file_parser</a>(FILE *file, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">int</span> <a class="code hl_function" href="parcer_8h.html#a8cd9b3cf41085b0ca0f7fe8a70f19132">check_str</a>(<span class="keywordtype">char</span> *str);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#ae746e89ca09d33b3f831669ab9679568">record_on_vertex</a>(<span class="keywordtype">char</span> *str, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">char</span> *<a class="code hl_function" href="parcer_8h.html#aef618d541250fcb70331f16984d4c589">convertation</a>(<span class="keywordtype">char</span> *str, <span class="keywordtype">double</span> *res);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">int</span> <a class="code hl_function" href="parcer_8h.html#ac6698ba0f45b8dea059c3739eb4218cc">s21_realloc_matrix</a>(<span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> columns, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *result);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a3b47b8c6fe618ec234b7f54037ff006f">s21_realloc_poligon_arr</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *result);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a6a43d5692c28191197c375d8eda9c9fb">s21_realloc_struct</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *result);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a1043de90ceead4e346fc7167ff78d7b1">s21_free_matrix</a>(<span class="keywordtype">int</span> rows, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a2e923b5e2fefeac4fc67aa25b2a57e77">s21_free_poligon</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#af80ac132d095acbe08583a9fca3d9047">record_on_poligon</a>(<span class="keywordtype">char</span> *str, <a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a64f9fa67471d3841ea7a6cce3867e283">centr</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a780932a3737bb8907ae85eca7dc7e0e7">mashtab</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp, <span class="keywordtype">double</span> mul);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#abd6d4383dd0b327d531386588c345f62">spin</a>(<span class="keywordtype">int</span> g, <span class="keywordtype">double</span> x, <a class="code hl_struct" href="structmain__struct.html">main_struct</a>* tmp);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#aa186822b6200a62dbf180fd7581b19fc">pr_file</a>(<span class="keywordtype">char</span> *file);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a256e19c889db019520ccc4d50ab3e452">print_matrix</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> <a class="code hl_function" href="parcer_8h.html#a5be6c58cfec2bee1d453e6290b88e42d">print_poligon</a>(<a class="code hl_struct" href="structmain__struct.html">main_struct</a> *tmp);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#endif  </span><span class="comment">// PARCER_H_</span></div>
+<div class="ttc" id="aparcer_8h_html_a1043de90ceead4e346fc7167ff78d7b1"><div class="ttname"><a href="parcer_8h.html#a1043de90ceead4e346fc7167ff78d7b1">s21_free_matrix</a></div><div class="ttdeci">void s21_free_matrix(int rows, main_struct *tmp)</div><div class="ttdoc">очищает матрицу</div><div class="ttdef"><b>Definition:</b> parser.c:276</div></div>
+<div class="ttc" id="aparcer_8h_html_a256e19c889db019520ccc4d50ab3e452"><div class="ttname"><a href="parcer_8h.html#a256e19c889db019520ccc4d50ab3e452">print_matrix</a></div><div class="ttdeci">void print_matrix(main_struct *tmp)</div><div class="ttdoc">принтует вершины</div><div class="ttdef"><b>Definition:</b> parser.c:229</div></div>
+<div class="ttc" id="aparcer_8h_html_a2e923b5e2fefeac4fc67aa25b2a57e77"><div class="ttname"><a href="parcer_8h.html#a2e923b5e2fefeac4fc67aa25b2a57e77">s21_free_poligon</a></div><div class="ttdeci">void s21_free_poligon(main_struct *tmp)</div><div class="ttdoc">очищает полигон</div><div class="ttdef"><b>Definition:</b> parser.c:288</div></div>
+<div class="ttc" id="aparcer_8h_html_a3b47b8c6fe618ec234b7f54037ff006f"><div class="ttname"><a href="parcer_8h.html#a3b47b8c6fe618ec234b7f54037ff006f">s21_realloc_poligon_arr</a></div><div class="ttdeci">void s21_realloc_poligon_arr(main_struct *result)</div><div class="ttdoc">реалочит полигон</div><div class="ttdef"><b>Definition:</b> parser.c:248</div></div>
+<div class="ttc" id="aparcer_8h_html_a5be6c58cfec2bee1d453e6290b88e42d"><div class="ttname"><a href="parcer_8h.html#a5be6c58cfec2bee1d453e6290b88e42d">print_poligon</a></div><div class="ttdeci">void print_poligon(main_struct *tmp)</div><div class="ttdoc">принтует структуры с полигонами</div><div class="ttdef"><b>Definition:</b> parser.c:238</div></div>
+<div class="ttc" id="aparcer_8h_html_a64f9fa67471d3841ea7a6cce3867e283"><div class="ttname"><a href="parcer_8h.html#a64f9fa67471d3841ea7a6cce3867e283">centr</a></div><div class="ttdeci">void centr(main_struct *tmp)</div><div class="ttdoc">центрует рисунок</div><div class="ttdef"><b>Definition:</b> parser.c:184</div></div>
+<div class="ttc" id="aparcer_8h_html_a6a43d5692c28191197c375d8eda9c9fb"><div class="ttname"><a href="parcer_8h.html#a6a43d5692c28191197c375d8eda9c9fb">s21_realloc_struct</a></div><div class="ttdeci">void s21_realloc_struct(main_struct *result)</div><div class="ttdoc">реалочит структуру полигонов</div><div class="ttdef"><b>Definition:</b> parser.c:254</div></div>
+<div class="ttc" id="aparcer_8h_html_a780932a3737bb8907ae85eca7dc7e0e7"><div class="ttname"><a href="parcer_8h.html#a780932a3737bb8907ae85eca7dc7e0e7">mashtab</a></div><div class="ttdeci">void mashtab(main_struct *tmp, double mul)</div><div class="ttdoc">редактирует масштаб</div><div class="ttdef"><b>Definition:</b> parser.c:221</div></div>
+<div class="ttc" id="aparcer_8h_html_a8cd9b3cf41085b0ca0f7fe8a70f19132"><div class="ttname"><a href="parcer_8h.html#a8cd9b3cf41085b0ca0f7fe8a70f19132">check_str</a></div><div class="ttdeci">int check_str(char *str)</div><div class="ttdoc">парсит строку</div><div class="ttdef"><b>Definition:</b> parser.c:54</div></div>
+<div class="ttc" id="aparcer_8h_html_aa186822b6200a62dbf180fd7581b19fc"><div class="ttname"><a href="parcer_8h.html#aa186822b6200a62dbf180fd7581b19fc">pr_file</a></div><div class="ttdeci">void pr_file(char *file)</div><div class="ttdoc">принтует файл</div><div class="ttdef"><b>Definition:</b> parser.c:359</div></div>
+<div class="ttc" id="aparcer_8h_html_abd6d4383dd0b327d531386588c345f62"><div class="ttname"><a href="parcer_8h.html#abd6d4383dd0b327d531386588c345f62">spin</a></div><div class="ttdeci">void spin(int g, double x, main_struct *tmp)</div><div class="ttdoc">перемножает массив вершин</div><div class="ttdef"><b>Definition:</b> parser.c:291</div></div>
+<div class="ttc" id="aparcer_8h_html_ac6698ba0f45b8dea059c3739eb4218cc"><div class="ttname"><a href="parcer_8h.html#ac6698ba0f45b8dea059c3739eb4218cc">s21_realloc_matrix</a></div><div class="ttdeci">int s21_realloc_matrix(int rows, int columns, main_struct *result)</div><div class="ttdoc">создает матрицу</div><div class="ttdef"><b>Definition:</b> parser.c:261</div></div>
+<div class="ttc" id="aparcer_8h_html_ad1b0ceef032cdd87af8fd057f953ff3a"><div class="ttname"><a href="parcer_8h.html#ad1b0ceef032cdd87af8fd057f953ff3a">parser</a></div><div class="ttdeci">int parser(char *file, main_struct *tmp)</div><div class="ttdoc">открывает файл и проверяет на валидность</div><div class="ttdef"><b>Definition:</b> parser.c:4</div></div>
+<div class="ttc" id="aparcer_8h_html_ae746e89ca09d33b3f831669ab9679568"><div class="ttname"><a href="parcer_8h.html#ae746e89ca09d33b3f831669ab9679568">record_on_vertex</a></div><div class="ttdeci">void record_on_vertex(char *str, main_struct *tmp)</div><div class="ttdoc">записывает координаты в матрицу tmp-&gt;v-&gt;vertex_matrix</div><div class="ttdef"><b>Definition:</b> parser.c:76</div></div>
+<div class="ttc" id="aparcer_8h_html_aef618d541250fcb70331f16984d4c589"><div class="ttname"><a href="parcer_8h.html#aef618d541250fcb70331f16984d4c589">convertation</a></div><div class="ttdeci">char * convertation(char *str, double *res)</div><div class="ttdoc">конвертирует строку в число и устанавливает указатель на следующее число</div><div class="ttdef"><b>Definition:</b> parser.c:153</div></div>
+<div class="ttc" id="aparcer_8h_html_aefe643581a10c60031d33f271f2fcaab"><div class="ttname"><a href="parcer_8h.html#aefe643581a10c60031d33f271f2fcaab">file_parser</a></div><div class="ttdeci">int file_parser(FILE *file, main_struct *tmp)</div><div class="ttdoc">читает файл построчно</div><div class="ttdef"><b>Definition:</b> parser.c:29</div></div>
+<div class="ttc" id="aparcer_8h_html_af80ac132d095acbe08583a9fca3d9047"><div class="ttname"><a href="parcer_8h.html#af80ac132d095acbe08583a9fca3d9047">record_on_poligon</a></div><div class="ttdeci">void record_on_poligon(char *str, main_struct *tmp)</div><div class="ttdoc">записывает координаты полигона в poligon_arr</div><div class="ttdef"><b>Definition:</b> parser.c:121</div></div>
+<div class="ttc" id="as21__matrix_8h_html"><div class="ttname"><a href="s21__matrix_8h.html">s21_matrix.h</a></div></div>
+<div class="ttc" id="astructmain__struct_html"><div class="ttname"><a href="structmain__struct.html">main_struct</a></div><div class="ttdoc">основная структура</div><div class="ttdef"><b>Definition:</b> parcer.h:33</div></div>
+<div class="ttc" id="astructmain__struct_html_a0c29f390f69443a571759aa8f42f3689"><div class="ttname"><a href="structmain__struct.html#a0c29f390f69443a571759aa8f42f3689">main_struct::v</a></div><div class="ttdeci">vertex * v</div><div class="ttdef"><b>Definition:</b> parcer.h:34</div></div>
+<div class="ttc" id="astructmain__struct_html_a1156179497e0b515c6ee6c27f3d307df"><div class="ttname"><a href="structmain__struct.html#a1156179497e0b515c6ee6c27f3d307df">main_struct::struct_count</a></div><div class="ttdeci">int struct_count</div><div class="ttdef"><b>Definition:</b> parcer.h:36</div></div>
+<div class="ttc" id="astructmain__struct_html_a36cb14e7775d60cbb035757865df0641"><div class="ttname"><a href="structmain__struct.html#a36cb14e7775d60cbb035757865df0641">main_struct::p</a></div><div class="ttdeci">poligon ** p</div><div class="ttdef"><b>Definition:</b> parcer.h:35</div></div>
+<div class="ttc" id="astructpoligon_html"><div class="ttname"><a href="structpoligon.html">poligon</a></div><div class="ttdoc">структура с полигонами</div><div class="ttdef"><b>Definition:</b> parcer.h:25</div></div>
+<div class="ttc" id="astructpoligon_html_a22a5e43a2bdc18f9310721be7b159947"><div class="ttname"><a href="structpoligon.html#a22a5e43a2bdc18f9310721be7b159947">poligon::poligon_sum</a></div><div class="ttdeci">int poligon_sum</div><div class="ttdef"><b>Definition:</b> parcer.h:27</div></div>
+<div class="ttc" id="astructpoligon_html_ad4869cc74a92a7cea7c7d00da15224e2"><div class="ttname"><a href="structpoligon.html#ad4869cc74a92a7cea7c7d00da15224e2">poligon::poligon_arr</a></div><div class="ttdeci">int * poligon_arr</div><div class="ttdef"><b>Definition:</b> parcer.h:26</div></div>
+<div class="ttc" id="astructvertex_html"><div class="ttname"><a href="structvertex.html">vertex</a></div><div class="ttdoc">структура хранения вершин</div><div class="ttdef"><b>Definition:</b> parcer.h:14</div></div>
+<div class="ttc" id="astructvertex_html_a2d04113c7464f928fdb547be52453e18"><div class="ttname"><a href="structvertex.html#a2d04113c7464f928fdb547be52453e18">vertex::vertex_matrix</a></div><div class="ttdeci">double ** vertex_matrix</div><div class="ttdef"><b>Definition:</b> parcer.h:16</div></div>
+<div class="ttc" id="astructvertex_html_ab748e1291d15a2075de8468498418adc"><div class="ttname"><a href="structvertex.html#ab748e1291d15a2075de8468498418adc">vertex::vertex_mount</a></div><div class="ttdeci">int vertex_mount</div><div class="ttdef"><b>Definition:</b> parcer.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

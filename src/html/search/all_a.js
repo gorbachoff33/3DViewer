@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['p_0',['p',['../structmain__struct.html#a36cb14e7775d60cbb035757865df0641',1,'main_struct']]],
+  ['paint_5fobj_1',['paint_obj',['../class_o_g_l_widget.html#a7ad0dc8afb811393bdbc0fbdda3011c2',1,'OGLWidget']]],
+  ['paintgl_2',['paintGL',['../class_o_g_l_widget.html#a62d9ab31fcd0a02359b8983f1fd6e2dd',1,'OGLWidget']]],
+  ['parcer_2eh_3',['parcer.h',['../parcer_8h.html',1,'']]],
+  ['pars_5fobj_4',['pars_obj',['../class_o_g_l_widget.html#a2b72e4e24eec7c93463a53bf69af254a',1,'OGLWidget']]],
+  ['parser_5',['parser',['../parcer_8h.html#ad1b0ceef032cdd87af8fd057f953ff3a',1,'parser(char *file, main_struct *tmp):&#160;parser.c'],['../parser_8c.html#ad1b0ceef032cdd87af8fd057f953ff3a',1,'parser(char *file, main_struct *tmp):&#160;parser.c']]],
+  ['parser_2ec_6',['parser.c',['../parser_8c.html',1,'']]],
+  ['path_7',['path',['../class_o_g_l_widget.html#a6a27d3f7cdd5a58cb46982a3b685d314',1,'OGLWidget']]],
+  ['path1_8',['path1',['../class_o_g_l_widget.html#af1dd0481c8bd2773b277ff04c8ff0c2c',1,'OGLWidget']]],
+  ['peaks_5fcolor_5fb_9',['peaks_color_b',['../class_ui___main_window.html#a62db5b6005266aa0768e77a276115c18',1,'Ui_MainWindow']]],
+  ['peaks_5fcolor_5fg_10',['peaks_color_g',['../class_ui___main_window.html#a7c56452955b1c9fe670b57c2490ff6cf',1,'Ui_MainWindow']]],
+  ['peaks_5fcolor_5fr_11',['peaks_color_r',['../class_ui___main_window.html#aa04db57e6ebd37d4edf65465dbf88dbd',1,'Ui_MainWindow']]],
+  ['poligon_12',['poligon',['../structpoligon.html',1,'poligon'],['../class_ui___main_window.html#a9bb31c5bc59706ab0d5282a6013da26c',1,'Ui_MainWindow::poligon()']]],
+  ['poligon_5farr_13',['poligon_arr',['../structpoligon.html#ad4869cc74a92a7cea7c7d00da15224e2',1,'poligon']]],
+  ['poligon_5fsum_14',['poligon_sum',['../structpoligon.html#a22a5e43a2bdc18f9310721be7b159947',1,'poligon']]],
+  ['pr_5ffile_15',['pr_file',['../parcer_8h.html#aa186822b6200a62dbf180fd7581b19fc',1,'pr_file(char *file):&#160;parser.c'],['../parser_8c.html#aa186822b6200a62dbf180fd7581b19fc',1,'pr_file(char *file):&#160;parser.c']]],
+  ['presp_16',['presp',['../class_o_g_l_widget.html#a8edf6fdf3017fa591a6ca2bc2c8fc662',1,'OGLWidget']]],
+  ['print_5fmatrix_17',['print_matrix',['../parcer_8h.html#a256e19c889db019520ccc4d50ab3e452',1,'print_matrix(main_struct *tmp):&#160;parser.c'],['../parser_8c.html#a256e19c889db019520ccc4d50ab3e452',1,'print_matrix(main_struct *tmp):&#160;parser.c']]],
+  ['print_5fpoligon_18',['print_poligon',['../parcer_8h.html#a5be6c58cfec2bee1d453e6290b88e42d',1,'print_poligon(main_struct *tmp):&#160;parser.c'],['../parser_8c.html#a5be6c58cfec2bee1d453e6290b88e42d',1,'print_poligon(main_struct *tmp):&#160;parser.c']]],
+  ['pushbutton_19',['pushButton',['../class_ui___main_window.html#ad332d93084584930878f1daf5f84cdbf',1,'Ui_MainWindow']]],
+  ['pushbutton_5f2_20',['pushButton_2',['../class_ui___main_window.html#a59a7d8124bce933d63f53f2153d447b4',1,'Ui_MainWindow']]],
+  ['pushbutton_5f3_21',['pushButton_3',['../class_ui___main_window.html#ac92cce0478c1025ace05ff4f8870bb1c',1,'Ui_MainWindow']]],
+  ['pushbutton_5f4_22',['pushButton_4',['../class_ui___main_window.html#acb0b2f196dc2224f287b67594233297f',1,'Ui_MainWindow']]]
+];

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DViewer: Исходный файл oglwidget.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">3DViewer<span id="projectnumber">&#160;v.1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">oglwidget.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="oglwidget_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef OGLWIDGET_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define OGLWIDGET_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QOpenGLWidget&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;qopenglfunctions.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QOpenGLFunctions&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QMouseEvent&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;QSettings&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="parcer_8h.html">parcer.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="s21__matrix_8h.html">s21_matrix.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * rtuyguhijomk</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * 8r6t79y8huijok</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="oglwidget_8h.html#a5b46963a2add83b4fe8be422fc50dbec">   36</a></span><span class="preprocessor">#define GL_SILENCE_DEORECATIONS</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_g_l_widget.html">OGLWidget</a> : <span class="keyword">public</span> QOpenGLWidget</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#af7219bd5e0c5e4706bbf052aed992ac3">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_o_g_l_widget.html#af7219bd5e0c5e4706bbf052aed992ac3">flag</a> = 1;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a47613d023c8bae275d46796fff7555f2">   46</a></span>    QSettings *<a class="code hl_variable" href="class_o_g_l_widget.html#a47613d023c8bae275d46796fff7555f2">settings</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_class" href="class_o_g_l_widget.html">OGLWidget</a>(QWidget *parent = 0);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_o_g_l_widget.html#a270f985c64a4509a2e7b20d7854f6a4e">~OGLWidget</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a2b72e4e24eec7c93463a53bf69af254a">pars_obj</a>(<span class="keywordtype">char</span> *<a class="code hl_variable" href="class_o_g_l_widget.html#a6a27d3f7cdd5a58cb46982a3b685d314">path</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a6a27d3f7cdd5a58cb46982a3b685d314">   50</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="class_o_g_l_widget.html#a6a27d3f7cdd5a58cb46982a3b685d314">path</a>[1000] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>     <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a62d9ab31fcd0a02359b8983f1fd6e2dd">paintGL</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#af1dd0481c8bd2773b277ff04c8ff0c2c">   52</a></span>     QString *<a class="code hl_variable" href="class_o_g_l_widget.html#af1dd0481c8bd2773b277ff04c8ff0c2c">path1</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#aeebdf9df0398b121f520c69e7d30b69f">   53</a></span>     <a class="code hl_struct" href="structmain__struct.html">main_struct</a> <a class="code hl_variable" href="class_o_g_l_widget.html#aeebdf9df0398b121f520c69e7d30b69f">obj</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>     <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a7ad0dc8afb811393bdbc0fbdda3011c2">paint_obj</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a8edf6fdf3017fa591a6ca2bc2c8fc662">   55</a></span>     <span class="keywordtype">int</span> <a class="code hl_variable" href="class_o_g_l_widget.html#a8edf6fdf3017fa591a6ca2bc2c8fc662">presp</a> = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>     <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a63c06569d499556a6cee57fe08235b1c">resizeGL</a>(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#aae5fc4861605279313fbc86a78e60d39">   58</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_o_g_l_widget.html#aae5fc4861605279313fbc86a78e60d39">x</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a624d34a5c2f3fc799fdb00542651019b">   59</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_o_g_l_widget.html#a624d34a5c2f3fc799fdb00542651019b">y</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#ae1f84e326b87deb3254f2bc293d28da3">   60</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_o_g_l_widget.html#ae1f84e326b87deb3254f2bc293d28da3">xa</a> = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#ad85f83d3fe7f66505dce542b1a9ad68d">   61</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_g_l_widget.html#ad85f83d3fe7f66505dce542b1a9ad68d">XRoad</a>, <a class="code hl_variable" href="class_o_g_l_widget.html#adf1587344b334baaf014929c455aef7a">YRoad</a>, <a class="code hl_variable" href="class_o_g_l_widget.html#ab02afb9dc5cf1385cf0d6b63fd72aea3">ZRoad</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#ab99c634b117713d35b36d08f2c37c3df">   62</a></span>    QPoint <a class="code hl_variable" href="class_o_g_l_widget.html#ab99c634b117713d35b36d08f2c37c3df">mPos</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a7109433af94f61fc4ee775fa52c35f6b">   63</a></span>    QTimer <a class="code hl_variable" href="class_o_g_l_widget.html#a7109433af94f61fc4ee775fa52c35f6b">tmr</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a8ffccbdfcfc390f188ddfb6e8f9dd07f">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a8ffccbdfcfc390f188ddfb6e8f9dd07f">drawCube</a> (<span class="keywordtype">float</span> a);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a9b16ff0635e331ed661785c08e997f1e">mousePressEvent</a>(QMouseEvent*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a039e6fb4222965e9bf9afb87be63961f">mouseMoveEvent</a>(QMouseEvent*)<span class="keyword">override</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_o_g_l_widget.html#a08929149499a63efb5eff8aa8e1d48b2">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a08929149499a63efb5eff8aa8e1d48b2">mouseWheeel</a>(QMoveEvent*);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_g_l_widget.html#a8bd4d7bab46d204df2786afd10ac3fd8">initializeGL</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span><span class="comment">// OGLWIDGET_H</span></div>
+<div class="ttc" id="aclass_o_g_l_widget_html"><div class="ttname"><a href="class_o_g_l_widget.html">OGLWidget</a></div><div class="ttdoc">класс отрисовки</div><div class="ttdef"><b>Definition:</b> oglwidget.h:43</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a039e6fb4222965e9bf9afb87be63961f"><div class="ttname"><a href="class_o_g_l_widget.html#a039e6fb4222965e9bf9afb87be63961f">OGLWidget::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *) override</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:19</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a08929149499a63efb5eff8aa8e1d48b2"><div class="ttname"><a href="class_o_g_l_widget.html#a08929149499a63efb5eff8aa8e1d48b2">OGLWidget::mouseWheeel</a></div><div class="ttdeci">void mouseWheeel(QMoveEvent *)</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a270f985c64a4509a2e7b20d7854f6a4e"><div class="ttname"><a href="class_o_g_l_widget.html#a270f985c64a4509a2e7b20d7854f6a4e">OGLWidget::~OGLWidget</a></div><div class="ttdeci">~OGLWidget()</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:9</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a2b72e4e24eec7c93463a53bf69af254a"><div class="ttname"><a href="class_o_g_l_widget.html#a2b72e4e24eec7c93463a53bf69af254a">OGLWidget::pars_obj</a></div><div class="ttdeci">void pars_obj(char *path)</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:51</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a47613d023c8bae275d46796fff7555f2"><div class="ttname"><a href="class_o_g_l_widget.html#a47613d023c8bae275d46796fff7555f2">OGLWidget::settings</a></div><div class="ttdeci">QSettings * settings</div><div class="ttdef"><b>Definition:</b> oglwidget.h:46</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a624d34a5c2f3fc799fdb00542651019b"><div class="ttname"><a href="class_o_g_l_widget.html#a624d34a5c2f3fc799fdb00542651019b">OGLWidget::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition:</b> oglwidget.h:59</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a62d9ab31fcd0a02359b8983f1fd6e2dd"><div class="ttname"><a href="class_o_g_l_widget.html#a62d9ab31fcd0a02359b8983f1fd6e2dd">OGLWidget::paintGL</a></div><div class="ttdeci">void paintGL() override</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:31</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a63c06569d499556a6cee57fe08235b1c"><div class="ttname"><a href="class_o_g_l_widget.html#a63c06569d499556a6cee57fe08235b1c">OGLWidget::resizeGL</a></div><div class="ttdeci">void resizeGL(int w, int h) override</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:94</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a6a27d3f7cdd5a58cb46982a3b685d314"><div class="ttname"><a href="class_o_g_l_widget.html#a6a27d3f7cdd5a58cb46982a3b685d314">OGLWidget::path</a></div><div class="ttdeci">char path[1000]</div><div class="ttdef"><b>Definition:</b> oglwidget.h:50</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a7109433af94f61fc4ee775fa52c35f6b"><div class="ttname"><a href="class_o_g_l_widget.html#a7109433af94f61fc4ee775fa52c35f6b">OGLWidget::tmr</a></div><div class="ttdeci">QTimer tmr</div><div class="ttdef"><b>Definition:</b> oglwidget.h:63</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a7ad0dc8afb811393bdbc0fbdda3011c2"><div class="ttname"><a href="class_o_g_l_widget.html#a7ad0dc8afb811393bdbc0fbdda3011c2">OGLWidget::paint_obj</a></div><div class="ttdeci">void paint_obj()</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:57</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a8bd4d7bab46d204df2786afd10ac3fd8"><div class="ttname"><a href="class_o_g_l_widget.html#a8bd4d7bab46d204df2786afd10ac3fd8">OGLWidget::initializeGL</a></div><div class="ttdeci">void initializeGL() override</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:26</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a8edf6fdf3017fa591a6ca2bc2c8fc662"><div class="ttname"><a href="class_o_g_l_widget.html#a8edf6fdf3017fa591a6ca2bc2c8fc662">OGLWidget::presp</a></div><div class="ttdeci">int presp</div><div class="ttdef"><b>Definition:</b> oglwidget.h:55</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a8ffccbdfcfc390f188ddfb6e8f9dd07f"><div class="ttname"><a href="class_o_g_l_widget.html#a8ffccbdfcfc390f188ddfb6e8f9dd07f">OGLWidget::drawCube</a></div><div class="ttdeci">void drawCube(float a)</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_a9b16ff0635e331ed661785c08e997f1e"><div class="ttname"><a href="class_o_g_l_widget.html#a9b16ff0635e331ed661785c08e997f1e">OGLWidget::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *) override</div><div class="ttdef"><b>Definition:</b> oglwidget.cpp:14</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_aae5fc4861605279313fbc86a78e60d39"><div class="ttname"><a href="class_o_g_l_widget.html#aae5fc4861605279313fbc86a78e60d39">OGLWidget::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition:</b> oglwidget.h:58</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_ab02afb9dc5cf1385cf0d6b63fd72aea3"><div class="ttname"><a href="class_o_g_l_widget.html#ab02afb9dc5cf1385cf0d6b63fd72aea3">OGLWidget::ZRoad</a></div><div class="ttdeci">float ZRoad</div><div class="ttdef"><b>Definition:</b> oglwidget.h:61</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_ab99c634b117713d35b36d08f2c37c3df"><div class="ttname"><a href="class_o_g_l_widget.html#ab99c634b117713d35b36d08f2c37c3df">OGLWidget::mPos</a></div><div class="ttdeci">QPoint mPos</div><div class="ttdef"><b>Definition:</b> oglwidget.h:62</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_ad85f83d3fe7f66505dce542b1a9ad68d"><div class="ttname"><a href="class_o_g_l_widget.html#ad85f83d3fe7f66505dce542b1a9ad68d">OGLWidget::XRoad</a></div><div class="ttdeci">float XRoad</div><div class="ttdef"><b>Definition:</b> oglwidget.h:61</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_adf1587344b334baaf014929c455aef7a"><div class="ttname"><a href="class_o_g_l_widget.html#adf1587344b334baaf014929c455aef7a">OGLWidget::YRoad</a></div><div class="ttdeci">float YRoad</div><div class="ttdef"><b>Definition:</b> oglwidget.h:61</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_ae1f84e326b87deb3254f2bc293d28da3"><div class="ttname"><a href="class_o_g_l_widget.html#ae1f84e326b87deb3254f2bc293d28da3">OGLWidget::xa</a></div><div class="ttdeci">int xa</div><div class="ttdef"><b>Definition:</b> oglwidget.h:60</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_aeebdf9df0398b121f520c69e7d30b69f"><div class="ttname"><a href="class_o_g_l_widget.html#aeebdf9df0398b121f520c69e7d30b69f">OGLWidget::obj</a></div><div class="ttdeci">main_struct obj</div><div class="ttdef"><b>Definition:</b> oglwidget.h:53</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_af1dd0481c8bd2773b277ff04c8ff0c2c"><div class="ttname"><a href="class_o_g_l_widget.html#af1dd0481c8bd2773b277ff04c8ff0c2c">OGLWidget::path1</a></div><div class="ttdeci">QString * path1</div><div class="ttdef"><b>Definition:</b> oglwidget.h:52</div></div>
+<div class="ttc" id="aclass_o_g_l_widget_html_af7219bd5e0c5e4706bbf052aed992ac3"><div class="ttname"><a href="class_o_g_l_widget.html#af7219bd5e0c5e4706bbf052aed992ac3">OGLWidget::flag</a></div><div class="ttdeci">int flag</div><div class="ttdef"><b>Definition:</b> oglwidget.h:45</div></div>
+<div class="ttc" id="aparcer_8h_html"><div class="ttname"><a href="parcer_8h.html">parcer.h</a></div></div>
+<div class="ttc" id="as21__matrix_8h_html"><div class="ttname"><a href="s21__matrix_8h.html">s21_matrix.h</a></div></div>
+<div class="ttc" id="astructmain__struct_html"><div class="ttname"><a href="structmain__struct.html">main_struct</a></div><div class="ttdoc">основная структура</div><div class="ttdef"><b>Definition:</b> parcer.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

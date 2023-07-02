@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3DViewer: Файл parser.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">3DViewer<span id="projectnumber">&#160;v.1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл parser.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="parcer_8h_source.html">parcer.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad1b0ceef032cdd87af8fd057f953ff3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#ad1b0ceef032cdd87af8fd057f953ff3a">parser</a> (char *file, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:ad1b0ceef032cdd87af8fd057f953ff3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">открывает файл и проверяет на валидность  <br /></td></tr>
+<tr class="separator:ad1b0ceef032cdd87af8fd057f953ff3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe643581a10c60031d33f271f2fcaab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#aefe643581a10c60031d33f271f2fcaab">file_parser</a> (FILE *file, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:aefe643581a10c60031d33f271f2fcaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">читает файл построчно  <br /></td></tr>
+<tr class="separator:aefe643581a10c60031d33f271f2fcaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd9b3cf41085b0ca0f7fe8a70f19132"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a8cd9b3cf41085b0ca0f7fe8a70f19132">check_str</a> (char *str)</td></tr>
+<tr class="memdesc:a8cd9b3cf41085b0ca0f7fe8a70f19132"><td class="mdescLeft">&#160;</td><td class="mdescRight">парсит строку  <br /></td></tr>
+<tr class="separator:a8cd9b3cf41085b0ca0f7fe8a70f19132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae746e89ca09d33b3f831669ab9679568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#ae746e89ca09d33b3f831669ab9679568">record_on_vertex</a> (char *str, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:ae746e89ca09d33b3f831669ab9679568"><td class="mdescLeft">&#160;</td><td class="mdescRight">записывает координаты в матрицу tmp-&gt;v-&gt;vertex_matrix  <br /></td></tr>
+<tr class="separator:ae746e89ca09d33b3f831669ab9679568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80ac132d095acbe08583a9fca3d9047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#af80ac132d095acbe08583a9fca3d9047">record_on_poligon</a> (char *str, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:af80ac132d095acbe08583a9fca3d9047"><td class="mdescLeft">&#160;</td><td class="mdescRight">записывает координаты полигона в poligon_arr  <br /></td></tr>
+<tr class="separator:af80ac132d095acbe08583a9fca3d9047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef618d541250fcb70331f16984d4c589"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#aef618d541250fcb70331f16984d4c589">convertation</a> (char *str, double *res)</td></tr>
+<tr class="memdesc:aef618d541250fcb70331f16984d4c589"><td class="mdescLeft">&#160;</td><td class="mdescRight">конвертирует строку в число и устанавливает указатель на следующее число  <br /></td></tr>
+<tr class="separator:aef618d541250fcb70331f16984d4c589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f9fa67471d3841ea7a6cce3867e283"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a64f9fa67471d3841ea7a6cce3867e283">centr</a> (<a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:a64f9fa67471d3841ea7a6cce3867e283"><td class="mdescLeft">&#160;</td><td class="mdescRight">центрует рисунок  <br /></td></tr>
+<tr class="separator:a64f9fa67471d3841ea7a6cce3867e283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780932a3737bb8907ae85eca7dc7e0e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a780932a3737bb8907ae85eca7dc7e0e7">mashtab</a> (<a class="el" href="structmain__struct.html">main_struct</a> *tmp, double mul)</td></tr>
+<tr class="memdesc:a780932a3737bb8907ae85eca7dc7e0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">редактирует масштаб  <br /></td></tr>
+<tr class="separator:a780932a3737bb8907ae85eca7dc7e0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256e19c889db019520ccc4d50ab3e452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a256e19c889db019520ccc4d50ab3e452">print_matrix</a> (<a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:a256e19c889db019520ccc4d50ab3e452"><td class="mdescLeft">&#160;</td><td class="mdescRight">принтует вершины  <br /></td></tr>
+<tr class="separator:a256e19c889db019520ccc4d50ab3e452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be6c58cfec2bee1d453e6290b88e42d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a5be6c58cfec2bee1d453e6290b88e42d">print_poligon</a> (<a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:a5be6c58cfec2bee1d453e6290b88e42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">принтует структуры с полигонами  <br /></td></tr>
+<tr class="separator:a5be6c58cfec2bee1d453e6290b88e42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b47b8c6fe618ec234b7f54037ff006f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a3b47b8c6fe618ec234b7f54037ff006f">s21_realloc_poligon_arr</a> (<a class="el" href="structmain__struct.html">main_struct</a> *result)</td></tr>
+<tr class="memdesc:a3b47b8c6fe618ec234b7f54037ff006f"><td class="mdescLeft">&#160;</td><td class="mdescRight">реалочит полигон  <br /></td></tr>
+<tr class="separator:a3b47b8c6fe618ec234b7f54037ff006f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a43d5692c28191197c375d8eda9c9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a6a43d5692c28191197c375d8eda9c9fb">s21_realloc_struct</a> (<a class="el" href="structmain__struct.html">main_struct</a> *result)</td></tr>
+<tr class="memdesc:a6a43d5692c28191197c375d8eda9c9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">реалочит структуру полигонов  <br /></td></tr>
+<tr class="separator:a6a43d5692c28191197c375d8eda9c9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6698ba0f45b8dea059c3739eb4218cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#ac6698ba0f45b8dea059c3739eb4218cc">s21_realloc_matrix</a> (int rows, int columns, <a class="el" href="structmain__struct.html">main_struct</a> *result)</td></tr>
+<tr class="memdesc:ac6698ba0f45b8dea059c3739eb4218cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">создает матрицу  <br /></td></tr>
+<tr class="separator:ac6698ba0f45b8dea059c3739eb4218cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1043de90ceead4e346fc7167ff78d7b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a1043de90ceead4e346fc7167ff78d7b1">s21_free_matrix</a> (int rows, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:a1043de90ceead4e346fc7167ff78d7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">очищает матрицу  <br /></td></tr>
+<tr class="separator:a1043de90ceead4e346fc7167ff78d7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e923b5e2fefeac4fc67aa25b2a57e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#a2e923b5e2fefeac4fc67aa25b2a57e77">s21_free_poligon</a> (<a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:a2e923b5e2fefeac4fc67aa25b2a57e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">очищает полигон  <br /></td></tr>
+<tr class="separator:a2e923b5e2fefeac4fc67aa25b2a57e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6d4383dd0b327d531386588c345f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#abd6d4383dd0b327d531386588c345f62">spin</a> (int g, double x, <a class="el" href="structmain__struct.html">main_struct</a> *tmp)</td></tr>
+<tr class="memdesc:abd6d4383dd0b327d531386588c345f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">перемножает массив вершин  <br /></td></tr>
+<tr class="separator:abd6d4383dd0b327d531386588c345f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa186822b6200a62dbf180fd7581b19fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8c.html#aa186822b6200a62dbf180fd7581b19fc">pr_file</a> (char *file)</td></tr>
+<tr class="memdesc:aa186822b6200a62dbf180fd7581b19fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">принтует файл  <br /></td></tr>
+<tr class="separator:aa186822b6200a62dbf180fd7581b19fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a64f9fa67471d3841ea7a6cce3867e283" name="a64f9fa67471d3841ea7a6cce3867e283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f9fa67471d3841ea7a6cce3867e283">&#9670;&#160;</a></span>centr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void centr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>центрует рисунок </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cd9b3cf41085b0ca0f7fe8a70f19132" name="a8cd9b3cf41085b0ca0f7fe8a70f19132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd9b3cf41085b0ca0f7fe8a70f19132">&#9670;&#160;</a></span>check_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_str </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>парсит строку </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>строка </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int 0 - ошибка, 1 - v, 2 - f </dd></dl>
+
+</div>
+</div>
+<a id="aef618d541250fcb70331f16984d4c589" name="aef618d541250fcb70331f16984d4c589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef618d541250fcb70331f16984d4c589">&#9670;&#160;</a></span>convertation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * convertation </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>конвертирует строку в число и устанавливает указатель на следующее число </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td>записывает результат </td></tr>
+    <tr><td class="paramname">str</td><td>строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>char* указатель на следующее число или NULL если числа нет </dd></dl>
+
+</div>
+</div>
+<a id="aefe643581a10c60031d33f271f2fcaab" name="aefe643581a10c60031d33f271f2fcaab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe643581a10c60031d33f271f2fcaab">&#9670;&#160;</a></span>file_parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int file_parser </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>читает файл построчно </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>файл </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int 1 - ОК, 0 - ошибка </dd></dl>
+
+</div>
+</div>
+<a id="a780932a3737bb8907ae85eca7dc7e0e7" name="a780932a3737bb8907ae85eca7dc7e0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a780932a3737bb8907ae85eca7dc7e0e7">&#9670;&#160;</a></span>mashtab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mashtab </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mul</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>редактирует масштаб </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+    <tr><td class="paramname">mul</td><td>число </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1b0ceef032cdd87af8fd057f953ff3a" name="ad1b0ceef032cdd87af8fd057f953ff3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b0ceef032cdd87af8fd057f953ff3a">&#9670;&#160;</a></span>parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parser </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>открывает файл и проверяет на валидность </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>файл </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int 1 - ОК, 0 - файл не существует </dd></dl>
+
+</div>
+</div>
+<a id="aa186822b6200a62dbf180fd7581b19fc" name="aa186822b6200a62dbf180fd7581b19fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa186822b6200a62dbf180fd7581b19fc">&#9670;&#160;</a></span>pr_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pr_file </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>принтует файл </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>файл </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a256e19c889db019520ccc4d50ab3e452" name="a256e19c889db019520ccc4d50ab3e452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a256e19c889db019520ccc4d50ab3e452">&#9670;&#160;</a></span>print_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>принтует вершины </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmp</td><td>структура </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5be6c58cfec2bee1d453e6290b88e42d" name="a5be6c58cfec2bee1d453e6290b88e42d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be6c58cfec2bee1d453e6290b88e42d">&#9670;&#160;</a></span>print_poligon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_poligon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>принтует структуры с полигонами </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmp</td><td>структура </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af80ac132d095acbe08583a9fca3d9047" name="af80ac132d095acbe08583a9fca3d9047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80ac132d095acbe08583a9fca3d9047">&#9670;&#160;</a></span>record_on_poligon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void record_on_poligon </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>записывает координаты полигона в poligon_arr </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>строка </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae746e89ca09d33b3f831669ab9679568" name="ae746e89ca09d33b3f831669ab9679568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae746e89ca09d33b3f831669ab9679568">&#9670;&#160;</a></span>record_on_vertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void record_on_vertex </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>записывает координаты в матрицу tmp-&gt;v-&gt;vertex_matrix </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>строка из файла </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1043de90ceead4e346fc7167ff78d7b1" name="a1043de90ceead4e346fc7167ff78d7b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1043de90ceead4e346fc7167ff78d7b1">&#9670;&#160;</a></span>s21_free_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void s21_free_matrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>очищает матрицу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>строки </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e923b5e2fefeac4fc67aa25b2a57e77" name="a2e923b5e2fefeac4fc67aa25b2a57e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e923b5e2fefeac4fc67aa25b2a57e77">&#9670;&#160;</a></span>s21_free_poligon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void s21_free_poligon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>очищает полигон </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmp</td><td>структура из QT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6698ba0f45b8dea059c3739eb4218cc" name="ac6698ba0f45b8dea059c3739eb4218cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6698ba0f45b8dea059c3739eb4218cc">&#9670;&#160;</a></span>s21_realloc_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s21_realloc_matrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>создает матрицу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>строки </td></tr>
+    <tr><td class="paramname">result</td><td>результат </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>int 0 - ОК, 1 - матрица не создана </dd></dl>
+
+</div>
+</div>
+<a id="a3b47b8c6fe618ec234b7f54037ff006f" name="a3b47b8c6fe618ec234b7f54037ff006f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b47b8c6fe618ec234b7f54037ff006f">&#9670;&#160;</a></span>s21_realloc_poligon_arr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void s21_realloc_poligon_arr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>реалочит полигон </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>результат записывает в poligon_arr </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a43d5692c28191197c375d8eda9c9fb" name="a6a43d5692c28191197c375d8eda9c9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a43d5692c28191197c375d8eda9c9fb">&#9670;&#160;</a></span>s21_realloc_struct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void s21_realloc_struct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>реалочит структуру полигонов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>результат </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd6d4383dd0b327d531386588c345f62" name="abd6d4383dd0b327d531386588c345f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6d4383dd0b327d531386588c345f62">&#9670;&#160;</a></span>spin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmain__struct.html">main_struct</a> *&#160;</td>
+          <td class="paramname"><em>tmp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>перемножает массив вершин </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>1 - х, 2 - у, 3 - z </td></tr>
+    <tr><td class="paramname">x</td><td>число </td></tr>
+    <tr><td class="paramname">tmp</td><td>структура </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
